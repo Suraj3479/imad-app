@@ -6,20 +6,20 @@ var app = express();
 app.use(morgan('combined'));
 var articles={
    'article-One':{
-      titl: 'Article one i Suraj Kishor',
+      title: 'Article one i Suraj Kishor',
       heading: 'Article One',
       date: 'july 6 1997',
       content: ' <p> This is the content of my first page This is Article One</p>'
       
   },
    'article-Two':{
-      titl:'Article two i Suraj Kishor', 
+      title:'Article two i Suraj Kishor', 
       heading:'Article Two',
       date:'july 6 1997',
       content:' <p> This is the content of my Second page This is Article One</p>'
    },
    'aticle-Three':{
-      titl:'Article Three i Suraj Kishor', 
+      title:'Article Three i Suraj Kishor', 
       heading:'Article Three',
       date:'july 6 1997',
       content:' <p> This is the content of my Third page This is Article One</p>'
@@ -27,7 +27,7 @@ var articles={
 };
 
 function createTemplet (data){
-var titl=data.titl;
+var title=data.title;
 var heading=data.heading;
 var date=data.date;
 var content=data.content;
@@ -36,7 +36,7 @@ var htmlTemplet=`
 <html>
     <head>
         <title>
-            ${titl}
+            ${title}
         </title>
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link href="/ui/style.css" rel="stylesheet" />
