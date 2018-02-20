@@ -4,25 +4,26 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 var articles={
-   'article-One':{
+   'article-one':{
       title: 'Article one i Suraj Kishor',
       heading: 'Article One',
       date: 'july 6 1997',
       content: ' <p> This is the content of my first page This is Article One</p>'
       
   },
-   'article-Two':{
+   'article-two':{
       title:'Article two i Suraj Kishor', 
       heading:'Article Two',
       date:'july 6 1997',
       content:' <p> This is the content of my Second page This is Article One</p>'
    },
-   'aticle-Three':{
+   'aticle-three':{
       title:'Article Three i Suraj Kishor', 
       heading:'Article Three',
       date:'july 6 1997',
