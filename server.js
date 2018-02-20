@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 
 var articles={
-   'article-One':{
+   'article-one':{
       title: 'Article one i Suraj Kishor',
       heading: 'Article One',
       date: 'july 6 1997',
