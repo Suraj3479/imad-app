@@ -5,12 +5,52 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne={
+  title:'Article one i Suraj Kishor', 
+  heading:'Article One',
+  date:'july 6 1997',
+  content:' <p> This is the content of my first page This is Article One</p>'
+};
+function createTemplet (data){
+var title=data.title;
+var date=data.date;
+var heading=data.heading;
+var content=data.content;
+
+var htmlTemplet=`
+<html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+       <div class='container'>
+          <div>
+            <href><a href="/">Home</a></href>
+           </div>
+           <hr/>
+           <h3>${heading}</h3>
+           <div>${date}</div>
+           <div>
+           <p> ${content}</p>
+           </div>
+       </div>
+    </body>
+</html>
+`;
+return htmlTemplet;
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res){
-  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(createTemplet(articleOne));
 });
 
 app.get('/article-two',function(req,res){
