@@ -7,7 +7,7 @@ button.onclick=function(){
     request.onreadystatechange=function(){
         if(request.readystate=== XMLHttpRequest.DONE){
             
-            if(reque.ststatus===200){
+            if(request.status===200){
                 var counter=request.respnseText;
                 var span=document.getElementById("count");
                span.innerHTML=counter.toString();
@@ -15,6 +15,6 @@ button.onclick=function(){
         }
         
     };
-request.open('Get','kishorsuraj1997.imad.hasura-app.io/counter',true);
+request.open('GET','kishorsuraj1997.imad.hasura-app.io/counter',true);
 request.send(null);
 };
