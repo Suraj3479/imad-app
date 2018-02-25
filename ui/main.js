@@ -14,6 +14,6 @@ button.onclick=function(){
         }
         
     };
-request.open('GET','kishorsuraj1997.imad.hasura-app.io/counter',true);
+request.open('GET','kishorsuraj1997.imad.hasura-app.io',true);
 request.send(null);
 };
