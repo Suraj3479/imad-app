@@ -15,28 +15,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles={
-   'article-one':{
-      title: 'Article one i Suraj Kishor',
-      heading: 'Article One',
-      date: 'july 6 1997',
-      content: ' <p> This is the content of my first page This is Article One</p>'
-      
-  },
-   'article-two':{
-      title:'Article two i Suraj Kishor', 
-      heading:'Article Two',
-      date:'july 6 1997',
-      content:' <p> This is the content of my Second page This is Article One</p>'
-   },
-   'aticle-three':{
-      title:'Article Three i Suraj Kishor', 
-      heading:'Article Three',
-      date:'july 6 1997',
-      content:' <p> This is the content of my Third page This is Article One</p>'
-   }
-};
-
 function createTemplet (data){
 var title=data.title;
 var heading=data.heading;
