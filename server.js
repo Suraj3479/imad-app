@@ -22,39 +22,6 @@ app.use(session({
     cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
-function createTemplet (data){
-var title=data.title;
-var heading=data.heading;
-var date=data.date;
-var content=data.content;
-
-var htmlTemplet=`
-<html>
-    <head>
-        <title>
-            ${title}
-        </title>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-       <div class='container'>
-          <div>
-            <href><a href="/">Home</a></href>
-           </div>
-           <hr/>
-           <h3>${heading}</h3>
-           <div>${date.toDateString()}</div>
-           <div>
-           <p> ${content}</p>
-           </div>
-       </div>
-    </body>
-</html>
-`;
-return htmlTemplet;
-}
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
