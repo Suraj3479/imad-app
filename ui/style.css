@@ -16,7 +16,8 @@ body {
 }
 
 .img-medium {
-    
+    height: 400px;
+    width:800px;
 }
 
 .container{
